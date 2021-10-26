@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assigment 06 - Humphrey, Adrian</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+
+	<body>
+<div class="container-fluid">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a class="hoverover" href="page1.html">Page 1</a></li>
+        <li><a class="hoverover" href="page2.html">Page 2</a></li>
+        <li><a class="hoverover" href="page3.html">Page 3</a></li>
+        <li><a class="hoverover" href="page4.html">Page 4</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div>
+    <div class="my-title">
+      <h2>Page 2 - Fibonacci</h2>
+    </div>
+  </div>
+</div>
+</body>
+
+<script>
+var fibonacciArray = [];
+
+function fibonacciCode(number){
+  if(number == 0){
+    return 0;
+  }
+  if (number == 1){
+    return 1
+  }
+  return fibonacciCode(number - 1) + fibonacciCode(number - 2);
+}
+
+for(var i = 0; i < 20; i++){
+    fibonacciArray[i] = fibonacciCode(i);
+  }
+  document.write('<p style="color: white"  class = "alignLeft">' + fibonacciArray.join(', ') + '</p>');
+</script>
+</html>

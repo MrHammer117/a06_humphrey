@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assigment 06 - Humphrey, Adrian</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+
+	<body>
+<div class="container-fluid">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a class="hoverover" href="page1.html">Page 1</a></li>
+        <li><a class="hoverover" href="page2.html">Page 2</a></li>
+        <li><a class="hoverover" href="page3.html">Page 3</a></li>
+        <li><a class="hoverover" href="page4.html">Page 4</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div>
+    <div class="my-title">
+      <h2>Page 1 - Squares and Cubes</h2>
+    </div>
+  </div>
+</div>
+<table>
+	<tr>
+    <th>Number</th>
+		<th>Square</th>
+    <th>Cube</th>
+  </tr>
+  <tr>
+    <td>5</td>
+		<td id = "rowSquare0"></td>
+    <td id = "rowCube0"></td>
+  </tr>
+  <tr>
+    <td>6</td>
+		<td id = "rowSquare1"></td>
+    <td id = "rowCube1"></td>
+  </tr>
+  <tr>
+    <td>7</td>
+		<td id = "rowSquare2"></td>
+    <td id = "rowCube2"></td>
+  </tr>
+  <tr>
+    <td>8</td>
+		<td id = "rowSquare3"></td>
+    <td id = "rowCube3"></td>
+  </tr>
+  <tr>
+    <td>9</td>
+		<td id = "rowSquare4"></td>
+    <td id = "rowCube4"></td>
+  </tr>
+  <tr>
+    <td>10</td>
+		<td id = "rowSquare5"></td>
+    <td id = "rowCube5"></td>
+  </tr>
+  <tr>
+    <td>11</td>
+		<td id = "rowSquare6"></td>
+    <td id = "rowCube6"></td>
+  </tr>
+  <tr>
+    <td>12</td>
+		<td id = "rowSquare7"></td>
+    <td id = "rowCube7"></td>
+  </tr>
+  <tr>
+    <td>13</td>
+		<td id = "rowSquare8"></td>
+    <td id = "rowCube8"></td>
+  </tr>
+  <tr>
+    <td>14</td>
+		<td id = "rowSquare9"></td>
+    <td id = "rowCube9"></td>
+  </tr>
+  <tr>
+    <td>15</td>
+		<td id = "rowSquare10"></td>
+    <td id = "rowCube10"></td>
+  </tr>
+</table>
+</body>
+<script>
+  var square = 0;
+  var cube = 0;
+	var v = 5;
+	for(let i = 0; i < 11; i++){
+    	square = Math.pow(v, 2);
+			document.getElementById("rowSquare" + i).innerHTML = square;
+    	cube = Math.pow(v, 3);
+			document.getElementById("rowCube" + i).innerHTML = cube;
+		v++;
+	}
+</script>
+</html>

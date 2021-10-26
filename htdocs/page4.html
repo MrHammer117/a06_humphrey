@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assigment 06 - Humphrey, Adrian</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+
+	<body>
+<div class="container-fluid">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a class="hoverover" href="page1.html">Page 1</a></li>
+        <li><a class="hoverover" href="page2.html">Page 2</a></li>
+        <li><a class="hoverover" href="page3.html">Page 3</a></li>
+        <li><a class="hoverover" href="page4.html">Page 4</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div>
+    <div class="my-title">
+      <h2>Page 4 - Sorted List</h2>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+var arr = [];
+document.write('<h2 class = "alignLeft">Unsorted random numbers</h2>');
+document.write('<p style="color: white" class = "alignLeft">')
+for(let i = 0; i < 20; i++){
+	arr[i] = Math.floor(Math.random() * 300);
+}
+for(let i = 0; i < 20; i++){
+	if(i < 19){
+  	document.write(arr[i] + ", ");
+  }
+	else{
+		document.write(arr[i]);
+	}
+}
+document.write("</p>");
+document.write('<h2 class = "alignLeft">Sorted random numbers</h2>');
+
+Array.prototype.sort = function(){
+	for(let i = this.length-1; i >= 0; i--){
+		for(let j = this.length-1; j >= 0; j--){
+			if(this[j] < this[j+1]){
+				let temp = this[j];
+				this[j] = this[j+1];
+				this[j+1] = temp;
+			}
+		}
+	}
+};
+
+arr.sort();
+document.write('<p style="color: white"  class = "alignLeft">')
+for(let i = 0; i < 20; i++){
+	if(i < 19){
+  	document.write(arr[i] + ", ");
+  }
+	else{
+		document.write(arr[i]);
+	}
+}
+document.write("</p>");
+</script>
+</html>

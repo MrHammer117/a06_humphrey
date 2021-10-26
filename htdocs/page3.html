@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assigment 06 - Humphrey, Adrian</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+
+	<body>
+<div class="container-fluid">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a class="hoverover" href="page1.html">Page 1</a></li>
+        <li><a class="hoverover" href="page2.html">Page 2</a></li>
+        <li><a class="hoverover" href="page3.html">Page 3</a></li>
+        <li><a class="hoverover" href="page4.html">Page 4</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div>
+    <div class="my-title">
+      <h2>Page 3 - Unique Words</h2>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+	var randomText = "An abstract is not required. This assignment uses a grading rubric. Instructors will be using the rubric to grade the assignment therefore students should review the rubric prior to beginning the assignment to become familiar with the assignment criteria and expectations for successful completion of the assignment.";
+	document.write('<h2  class = "alignLeft" >Original Text</h2>');
+	document.write('<p style= "color: white" class = "alignLeft">' + randomText + '<p>');
+	randomText.replaceAll(".","");
+	let oldArray = randomText.split(' ');
+	const newSet = new Set(oldArray);
+	var newArray = [...newSet];
+	newArray.sort();
+		for (var i = 0;i<newArray.length;i++) {
+ 				if (newArray[i].includes('.')) {
+ 						newArray[i] = newArray[i].substring(0, newArray[i].length - 1);
+ 				}
+		}
+	let unique = newArray.toString();
+	unique = unique.replaceAll(',', ' | ');
+	document.write('<h2 class = "alignLeft">Unique Words</h2>');
+	document.write('<p style="color: white" class = "alignLeft">' + unique + '<p>');
+</script>
+</html>
